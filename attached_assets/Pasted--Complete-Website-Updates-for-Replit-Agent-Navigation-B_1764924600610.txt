@@ -1,0 +1,83 @@
+# Complete Website Updates for Replit Agent
+
+## Navigation Button Change
+
+Change the top right corner button text from "Book 30-min Demo" to "Book Brand Audit". Keep the styling the same, just update the text.
+
+---
+
+## Hero Section Input Validation and CTA Connection
+
+Find the hero section input field where users enter their website with the "Check your Brand Visibility" button.
+
+Make it work like this:
+- When the page loads, the button should be enabled and clickable (not disabled)
+- If someone clicks the button without entering anything in the input field, show a small red error message below the input that says: "*Please enter your website"
+- The error message should be small font size, red color, and appear right below the input field
+- If someone types anything into the input field and then clicks the button, it should open this link in a new tab: https://cal.com/craftai/30min
+- Clear the error message if they start typing in the input field
+
+No database connection needed. Just validate that something is typed and then open the calendar link.
+
+---
+
+## Dashboard Section Input Validation and CTA Connection
+
+Find the dashboard section input field where users enter their category leader brand with the "Analyze Their Position" button.
+
+Make it work the same way:
+- Button is enabled by default
+- If clicked without any input, show error message below the field: "*Please enter your competitor's brand"
+- Error message in small red font
+- If there's text in the input and button is clicked, open this link in new tab: https://cal.com/craftai/30min
+- Error disappears when user starts typing
+
+No database connection needed. Just validation and link opening.
+
+---
+
+## Confirmation Page Creation
+
+Create a new page accessible at: /confirmation or https://craftai.co.in/confirmation
+
+This is where users land after booking a call on Cal.com.
+
+**Page Design:**
+
+The page should match the website's current design style with the same navigation header and footer.
+
+**Page Content:**
+
+At the center of the page, show:
+- A checkmark icon or success visual (green checkmark in a circle works well)
+- Heading: "Your Booking is Confirmed"
+- Body text below the heading: "Thank you for your interest in understanding your AI visibility. We're looking forward to auditing where your brand stands when customers have conversations with AI—and showing you exactly how to own those conversations. You'll receive a calendar invitation shortly with the meeting details. See you soon."
+- A prominent button that says "Back to Home" which links to the homepage (main URL)
+
+**Auto-Redirect Feature:**
+
+Below the "Back to Home" button, add small grey text that says: "Redirecting to home in 10 seconds"
+
+The page should automatically redirect to the homepage after 10 seconds. Show a countdown in the text - it should count down like "Redirecting to home in 9 seconds", "Redirecting to home in 8 seconds", etc.
+
+Update the number every second until it reaches 0, then redirect to the homepage automatically.
+
+---
+
+## Important Note About Database
+
+Add a comment in the code that says: "No database connection in this version. Input validation only - actual data not stored."
+
+The input fields are just for validation purposes. We're not saving anything to a database right now. Just checking that users enter something before sending them to the calendar booking.
+
+---
+
+## Summary of What Should Work
+
+1. Top navigation button says "Book Brand Audit"
+2. Hero section input shows red error if empty when button clicked, opens calendar if filled
+3. Dashboard section input shows red error if empty when button clicked, opens calendar if filled
+4. Confirmation page exists with success message, home button, and 10-second countdown redirect
+5. No database connections anywhere - just front-end validation and link routing
+
+That's everything. Make it functional and clean.

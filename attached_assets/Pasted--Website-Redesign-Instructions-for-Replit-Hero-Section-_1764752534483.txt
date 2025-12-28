@@ -1,0 +1,219 @@
+# Website Redesign Instructions for Replit
+
+## Hero Section Changes
+
+### Change 1: Dynamic Fact Display
+**Location:** Below header, three horizontal data points (40% of AI conversations, 73% lack sources, Early adopters 340% boost)
+
+**Current State:** Static, displayed horizontally in one line
+
+**Required Change:** 
+- Make dynamic with fade in/fade out transitions
+- Display one fact at a time, centrally aligned
+- Smooth transition between facts (fade out → fade in next)
+- Continuous rotation through all three facts
+
+### Change 2: Remove Element
+**Delete:** "AI-First Intent Solution" box below the first line
+
+### Change 3: Strikethrough Effect
+**Target:** The word "Keywords" in main heading
+
+**Required Change:**
+- Add strikethrough styling to "Keywords"
+- Change text color from white to grey/muted color
+
+### Change 4: New Heading Structure
+**Replace existing text with:**
+
+**Line 1:** "Own the intent-driven conversations your customers are having with"
+**Line 2 (new line, shift+enter break):** Typewriter animation displaying: "ChatGPT, Perplexity, Gemini, Claude, Copilot" 
+
+**Specifications:**
+- Display one platform name at a time in typewriter effect
+- Line 2 text should be one size larger than Line 1
+- Line 2 text should be bold
+- Continuous loop through all platform names
+
+### Change 5: Remove Duplicate
+**Delete:** Duplicate line below the typewriter text
+
+### Change 6: Add Input Field with CTA
+**Add new element:**
+- Text input field with placeholder text: "Enter your website" (grey color)
+- CTA button positioned immediately to the right of input field
+- Button text: "Check your Brand Visibility"
+- This serves as the primary CTA for home screen
+
+### Change 7: Trust Elements Redesign
+**Target:** Two trust indicator texts: "We execute for you" and "Results in 30 days"
+
+**Required Change:** Redesign these elements to appear more authoritative and build client trust (improve visual hierarchy, styling, positioning)
+
+---
+
+## Second Page - Questions Section Changes
+
+### Change 1: Floating Questions Animation
+**Current State:** Questions with hover insights
+
+**Required Change:**
+- Questions float upward on screen and fade away
+- Display two questions at a time
+- As current pair fades away at top, new pair enters from bottom
+- Maintain hover functionality: when hovering over question boxes, they highlight and show insights (keep current behavior)
+- Continuous animation loop
+
+**Reposition text:** Move "These intent-driven conversations represent missed revenue opportunities" to appear just below the floating questions area
+
+### Change 2: Rewrite Section Text
+**Delete:** "No More Top 10 Brands on Google Search"
+
+**Delete:** "The brands that win tomorrow are positioning themselves as the authoritative answer today"
+
+**Replace with new heading:** "No More Google Search for Best Brands"
+
+**Add new description:** Write content conveying: customers are shifting from Google search to AI conversations with more trust, belongingness, and authority (emotional connection focused)
+
+---
+
+## Dashboard Section Changes
+
+### Main Heading
+"Your Category Leaders Are Dominating AI Conversations"
+
+### Dashboard Title
+"Category Leader Performance - Live AI Visibility"
+
+### Metrics Display
+Display the following metrics with populated data representing top performers:
+
+- **Share of Voice:** 86%
+- **AI Visibility:** 12,400 mentions last month
+- **Citations & Mentions:** +340% growth (60 days)
+- **Competitor Analysis:** Market leader position
+
+**Platform Execution:**
+- ChatGPT Citations: 65%
+- Gemini Mentions: 38%
+- Perplexity References: 45%
+
+**Competitive Position:**
+- Category Leader A: Dominant position
+- Category Leader B: Strong presence
+- Everyone Else: Fighting for scraps
+
+### Input Field and CTA
+**Input field placeholder:** "Enter your category leader brand"
+
+**CTA Button text:** "Analyze Their Position"
+
+### Overall Layout Structure
+```
+[Heading - Centered]
+↓
+[Context text]
+↓
+[Full-width Dashboard - Dark theme, clean]
+↓
+[Prompt + Input + CTA - Centered]
+```
+
+### Technical Specifications for Dashboard
+
+**Responsive Design:**
+- Optimized for desktop
+- All content visible without scrolling on 1080p screens
+
+**Icons:**
+- SVG format
+- Maximum size: 20px
+
+**Animations:**
+- CSS-based counter animations (avoid heavy JavaScript)
+- Number count-up effect on load
+
+**Theme:**
+- Maintain current dark aesthetic
+
+**Loading State:**
+- Show skeleton/shimmer effect before numbers populate
+
+---
+
+## Four Pillars Section Changes
+
+### Section Heading
+**Main Heading:** "How We Turn Intent Into Authority"
+
+**Subheading:** "framework that connects real customer questions to your brand"
+
+### Pillar 01: Intent Mapping & Discovery
+
+**Headline:** "Map Real Customer Intent"
+
+**Body Copy:** "We analyze thousands of conversations across Reddit and forums to identify exact questions your customers ask. Using conversation analysis, we map customer problems to your solutions—creating a strategic intent blueprint."
+
+**Key Metric:** "2,500+ questions analyzed per brand"
+
+---
+
+### Pillar 02: Authentic Community Engagement
+
+**Headline:** "Build Trust Where It Matters"
+
+**Body Copy:** "Reddit-first approach: identify high-intent discussions where your audience seeks guidance, then engage authentically. No spam, no shortcuts—just genuine expertise that builds credibility."
+
+**Key Metric:** "150+ authentic engagements monthly"
+
+---
+
+### Pillar 03: Intent-Solving Content Creation
+
+**Headline:** "Create Content That Converts Intent"
+
+**Body Copy:** "Every piece directly answers real customer questions. Using Jobs-to-be-Done and StoryBrand frameworks, we craft authoritative resources that bridge customer problems to your expertise—optimized for AI platforms."
+
+**Key Metric:** "15-20 intent-optimized assets/month"
+
+---
+
+### Pillar 04: Strategic AI Platform Optimization
+
+**Headline:** "Systematically Dominate AI Search"
+
+**Body Copy:** "Through strategic content placement and continuous testing, your brand becomes the authoritative answer across ChatGPT, Gemini, and Perplexity. We track every citation and refine weekly—making AEO a predictable growth channel."
+
+**Key Metric:** "260% citation growth in 60 days"
+
+---
+
+### Layout Configuration - Diagonal Ascending
+
+Display four pillar cards in diagonal ascending pattern from bottom-left to top-right:
+
+```
+                                [04] [Card]
+                               ╱
+                      [03] [Card]
+                     ╱
+            [02] [Card]
+           ╱
+  [01] [Card]
+```
+
+### Micro-interactions
+
+**On Hover:**
+- Apply subtle lift/elevation effect to card
+- Add slight glow effect to the number indicator (01, 02, 03, 04)
+
+### Visual Metaphor
+The upward diagonal progression should convey:
+- Climbing stairs to authority
+- Building blocks stacking toward growth
+- Ascending path from insight to dominance
+
+---
+
+**End of Instructions**

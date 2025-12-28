@@ -1,0 +1,93 @@
+# Website Final Updates for Replit Agent
+
+## Navigation CTA Button - Make It Functional
+
+The "Book 30-min Demo" button in the top right corner of the navigation needs to work. When someone clicks it, it should open this calendar link in a new tab: https://cal.com/craftai/30min
+
+Simple click action - just connect the button to open that link.
+
+---
+
+## Confirmation Page - Fix Routing
+
+The confirmation page at /confirmation is not loading properly. Make sure this page exists and works correctly.
+
+When Cal.com redirects users to https://craftai.co.in/confirmation after they book a call, the page should load and display the success message we created earlier - the one with "Your Booking is Confirmed" heading, the thank you text, checkmark icon, home button, and the 10-second countdown redirect.
+
+Test that the routing works properly. The page needs to be accessible at the /confirmation path and should work regardless of how someone lands on it.
+
+---
+
+## Footer Section - Add Essential Info
+
+The footer needs a few additions to make it complete but keep it minimal and clean.
+
+Add a tagline somewhere in the footer that says: "Solving AI visibility for brands"
+
+Add a contact section with an email. You can show it like:
+"Reach out to us at hello@craftai.co.in"
+
+Or use a simple "Contact" or "Help" label with the email displayed or as a mailto link.
+
+Keep the footer uncluttered - we don't want a heavy footer with tons of links. Just the essentials: the tagline, contact email, and maybe keep any existing copyright or company name info. Make it look professional and balanced.
+
+---
+
+## Bottom Left Notification Messages - Create Multiple Variations
+
+Those small notification pop-ups in the bottom left corner (like "HealthTech Brand just booked demo consultation" and "Beauty Brand just gained AI citations") need more variety and better messaging.
+
+Create 15 different notification messages that rotate randomly. The messages should be short enough to fit in that small notification box. They should build curiosity and reinforce the value proposition about AI conversations and intent capture.
+
+**Here are the types of messages to create:**
+
+Messages about brands booking audits or consultations
+Messages about AI citation growth or visibility gains  
+Messages about conversation volume in different categories
+Messages about competitive positioning changes
+Messages about platform-specific wins (ChatGPT, Perplexity, Claude mentions)
+Messages that create FOMO about categories being competitive
+Messages about discovery or gap opportunities
+
+Keep each message to about 6-10 words maximum. Make them feel real and specific but varied. Use different brand categories like health tech, beauty, pet care, fitness, baby products, etc.
+
+**Examples of the style (but create your own):**
+- "Fitness brand gained 47 ChatGPT citations"
+- "Pet care company booked audit session"
+- "Beauty brand overtook competitor in AI search"
+- "Health tech: 23 new conversations this week"
+- "Baby products brand hit 340% growth"
+
+Create 15 unique messages in this style. Mix up the categories, numbers, and specific achievements. Make them feel like real-time activity that builds credibility and urgency.
+
+These should appear randomly in the bottom left corner notification, rotating through different messages to show dynamic activity on the site.
+
+---
+
+## Before vs After Section - Update Numbers
+
+In the "Before vs After: Real Client Results" section, the "Before" metrics don't make sense with zeros and negative values.
+
+Change the "Before" numbers to something more realistic:
+
+**Before Section should show:**
+- AI Citations: 4% or 5% (instead of 0%)
+- Intent Capture: 8 or 12 (instead of 0)
+- Market Share: 13% (keep this one)
+- AI-Driven Leads: 3 or 5 (instead of 0)
+
+Use single-digit or low double-digit numbers that show they had minimal presence but not complete zero. This makes the transformation to the "After" numbers more dramatic and believable.
+
+The "After" section numbers can stay as they are - those look good.
+
+---
+
+## Summary
+
+1. Connect top navigation button to calendar link
+2. Make sure /confirmation page routing works properly
+3. Add minimal footer with tagline and contact email
+4. Create 15 varied notification messages for bottom left pop-up
+5. Update "Before" section numbers to realistic low values instead of zeros
+
+Keep everything clean and functional. The notifications should feel dynamic and the numbers should tell a believable transformation story.

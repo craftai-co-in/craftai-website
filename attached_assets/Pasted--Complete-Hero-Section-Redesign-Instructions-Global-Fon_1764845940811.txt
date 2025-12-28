@@ -1,0 +1,265 @@
+# Complete Hero Section Redesign Instructions
+
+## Global Font Changes
+
+### Typewriter Animation Font
+- Font-family: 'Space Grotesk' or 'JetBrains Mono' or 'Courier Prime' (monospace/futuristic style)
+- Font-size: 32px
+- Font-weight: 700
+- Letter-spacing: 0.02em
+- Background: linear-gradient(90deg, #3B82F6, #8B5CF6, #EC4899)
+- -webkit-background-clip: text
+- -webkit-text-fill-color: transparent
+- Text-align: center
+- Animation: Typing effect with blinking cursor
+
+### Main Heading Font Refinement
+- Font-family: 'Inter' or 'Sohne' (modern, clean)
+- Font-size: 64px
+- Font-weight: 700
+- Line-height: 1.1
+- Letter-spacing: -0.03em
+- Text-align: center
+- "Keywords": color #6B7280, text-decoration: line-through, text-decoration-thickness: 2px
+- "to Intent": color #FFFFFF
+
+## Rotating Facts Section
+
+### Container
+- Width: 100%
+- Height: 32px (fixed)
+- Position: relative
+- Margin-bottom: 24px
+- Overflow: hidden
+
+### Individual Facts
+- Position: absolute
+- Top: 0
+- Left: 50%
+- Transform: translateX(-50%)
+- Font-size: 14px
+- Font-weight: 500
+- Color: #9CA3AF
+- Text-align: center
+- Opacity animation: 0 → 1 (0.5s) → stay 3s → 0 (0.5s)
+- Only one fact visible at any time
+- Z-index management to prevent overlap
+
+## Main Heading Section
+
+### "From Keywords to Intent"
+- Font-size: 64px
+- Font-weight: 700
+- Line-height: 1.1
+- Letter-spacing: -0.03em
+- Text-align: center
+- Margin-bottom: 20px
+- Color: #FFFFFF
+- "Keywords" styling: color #6B7280, text-decoration line-through 2px
+
+### Subheading Line
+- Text: "Own the intent-driven conversations your customers are having with"
+- Font-size: 18px
+- Font-weight: 400
+- Line-height: 1.5
+- Color: #D1D5DB
+- Text-align: center
+- Max-width: 680px
+- Margin: 0 auto 8px auto
+
+### Typewriter Animation Line
+- Font-family: 'Space Grotesk' or 'JetBrains Mono' (monospace/tech feel)
+- Font-size: 32px
+- Font-weight: 700
+- Letter-spacing: 0.02em
+- Text-align: center
+- Min-height: 44px
+- Background: linear-gradient(90deg, #3B82F6 0%, #8B5CF6 50%, #EC4899 100%)
+- -webkit-background-clip: text
+- -webkit-text-fill-color: transparent
+- Typing animation: Display platforms one by one - "ChatGPT" → erase → "Perplexity" → erase → "Gemini" → erase → "Claude" → erase → "Copilot" → loop
+- Blinking cursor effect at end of text
+- Typing speed: 80ms per character
+- Pause between words: 2s
+- Margin-bottom: 40px
+
+## Input + CTA Combined Section
+
+### Container (Single Box Design)
+- Display: flex
+- Align-items: stretch
+- Width: 560px
+- Height: 64px
+- Margin: 0 auto 32px auto
+- Background: rgba(255, 255, 255, 0.03)
+- Border: 1px solid rgba(255, 255, 255, 0.1)
+- Border-radius: 16px
+- Overflow: hidden
+- Backdrop-filter: blur(20px)
+- Transition: border-color 0.3s ease
+
+### Input Field (Left Side - Takes Remaining Space)
+- Flex: 1
+- Height: 100%
+- Padding: 0 24px
+- Background: transparent
+- Border: none
+- Font-size: 16px
+- Font-weight: 400
+- Color: #FFFFFF
+- Placeholder: "Enter your website"
+- Placeholder color: #6B7280
+- Outline: none
+- Focus state: Container border becomes rgba(59, 130, 246, 0.4)
+
+### CTA Button (Right Side - Fixed Width)
+- Width: 200px
+- Height: 100%
+- Padding: 0 24px
+- Background: linear-gradient(135deg, #3B82F6 0%, #8B5CF6 100%)
+- Border: none
+- Border-left: 1px solid rgba(255, 255, 255, 0.08)
+- Font-size: 15px
+- Font-weight: 600
+- Color: #FFFFFF
+- Text-align: center
+- Cursor: pointer
+- Transition: all 0.3s ease
+- Hover state: Background becomes linear-gradient(135deg, #4F91FF 0%, #9D6FE8 100%), slight glow effect box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.1)
+- Text: "Check Brand Visibility"
+
+## Trust Indicator Section
+
+### Remove Elements
+- Delete: "We Execute For You" box with checkmark icon
+- Delete: Separate "Results in 30 Days" box
+
+### New Single Trust Badge
+- Display: inline-flex
+- Align-items: center
+- Gap: 12px
+- Padding: 14px 24px
+- Background: rgba(34, 197, 94, 0.08)
+- Border: 1px solid rgba(34, 197, 94, 0.25)
+- Border-radius: 100px (full pill shape)
+- Margin: 0 auto
+- Position: centered below input section
+
+### Badge Content
+- Icon: Simple checkmark circle SVG, 22px, color #22C55E, stroke-width 2
+- Text container: Display flex, flex-direction column, gap 2px
+- Primary text: "Results in 30 Days" - font-size 15px, font-weight 600, color #E5E7EB
+- Secondary text: "Measurable AI citations" - font-size 13px, font-weight 400, color #9CA3AF
+
+## Spacing & Layout Optimization (Fit Desktop 100% Zoom)
+
+### Section Padding
+- Padding-top: 48px
+- Padding-bottom: 48px
+
+### Vertical Spacing Between Elements
+- Facts section height: 32px fixed
+- Facts to heading: 24px
+- Heading to subheading: 20px
+- Subheading to typewriter: 8px
+- Typewriter to input: 40px
+- Input to trust badge: 32px
+
+### Maximum Heights
+- Hero section total max-height: ~580px
+- Ensures everything visible on 1080p screens at 100% zoom without scrolling
+
+## Color Palette
+
+### Background & Surfaces
+- Main background: #0F172A
+- Input container background: rgba(255, 255, 255, 0.03)
+- Badge background: rgba(34, 197, 94, 0.08)
+
+### Borders
+- Default subtle border: rgba(255, 255, 255, 0.1)
+- Focus border: rgba(59, 130, 246, 0.4)
+- Badge border: rgba(34, 197, 94, 0.25)
+- Button inner border: rgba(255, 255, 255, 0.08)
+
+### Text Colors
+- Primary white: #FFFFFF
+- Secondary light: #E5E7EB
+- Tertiary medium: #D1D5DB
+- Muted grey: #9CA3AF
+- Strikethrough grey: #6B7280
+- Placeholder grey: #6B7280
+
+### Accent Colors
+- Primary blue: #3B82F6
+- Secondary purple: #8B5CF6
+- Tertiary pink: #EC4899
+- Success green: #22C55E
+
+### Gradients
+- Typewriter text: linear-gradient(90deg, #3B82F6 0%, #8B5CF6 50%, #EC4899 100%)
+- CTA button: linear-gradient(135deg, #3B82F6 0%, #8B5CF6 100%)
+- CTA button hover: linear-gradient(135deg, #4F91FF 0%, #9D6FE8 100%)
+
+## Animation & Interaction Details
+
+### Rotating Facts Animation
+- Duration per fact: 4 seconds total (0.5s fade in + 3s display + 0.5s fade out)
+- Transition: opacity ease-in-out
+- Continuous loop through all three facts
+
+### Typewriter Animation
+- Typing speed: 80ms per character
+- Backspace speed: 40ms per character
+- Pause after complete word: 2s
+- Cursor blink: 0.7s interval
+- Cursor character: "|" or "▎"
+- Cursor color: matches gradient (or solid #8B5CF6)
+- Loop continuously through: ChatGPT → Perplexity → Gemini → Claude → Copilot
+
+### Input Container Interactions
+- Default state: border rgba(255, 255, 255, 0.1)
+- Focus state: border rgba(59, 130, 246, 0.4), transition 0.3s ease
+- Backdrop-filter: blur(20px) always active
+
+### CTA Button Interactions
+- Default state: gradient background, no shadow
+- Hover state: 
+  - Background gradient shifts slightly lighter
+  - Box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.1)
+  - Transition: all 0.3s ease
+- Active/Click state: slight scale down to 0.98
+
+### Trust Badge
+- Static (no hover effects needed)
+- Subtle entrance animation on page load: fade in from bottom, 0.6s delay after page load
+
+## Responsive Behavior (Desktop Only Optimization)
+
+### Breakpoint: 1920px+
+- Max-width container: 1200px centered
+- All elements scale proportionally
+
+### Breakpoint: 1280px - 1920px
+- Maintain current sizing
+- Container width: 90% max
+
+### Breakpoint: 1024px - 1280px
+- Reduce heading font-size to 56px
+- Reduce typewriter font-size to 28px
+- Input container width: 520px
+- Maintain single-screen fit
+
+## Implementation Notes
+
+- Use CSS custom properties for colors to maintain consistency
+- Implement typewriter with JavaScript using async/await for clean timing control
+- Use CSS Grid or Flexbox for centering, avoid absolute positioning where possible
+- Ensure all animations use CSS transforms for performance (GPU acceleration)
+- Add will-change: transform to animated elements
+- Preload custom fonts to prevent FOUT (Flash of Unstyled Text)
+- Add reduced-motion media query fallbacks for accessibility
+
+---
+
+**Design Philosophy:** Minimal, elegant, professional with subtle futuristic touches. Dark background allows gradient accents and light borders to create depth without visual clutter. Every element serves a purpose, nothing decorative.

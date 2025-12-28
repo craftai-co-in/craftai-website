@@ -1,0 +1,28 @@
+Questions Section - Fix the Floating Animation
+The floating questions need to move smoothly and consistently. Right now they're appearing randomly and moving erratically. Here's what needs to happen:
+Show two questions at a time - one appearing from the bottom left side and one from the bottom right side. They should rise up together at the same speed, stay in the middle of the screen for about 4 seconds so people can read them, then continue floating up and fade away at the top. Once those two exit, the next pair should come in from the bottom in the same way.
+The questions should always enter from bottom-left and bottom-right positions, never from the center. Keep this pattern consistent - left and right, left and right, continuously looping through all the questions.
+When someone hovers over a question card, it should pause briefly, lift up slightly, get a subtle glow, and show a small category badge above it (like "Health & Wellness" or "Pet Care"). The animation timing should feel smooth and natural, not jerky or sudden.
+The text "These intent-driven conversations represent missed revenue opportunities" should sit below the animation area, centered, with some breathing room above it.
+Make the animation container tall enough to contain the full movement, and make sure questions don't suddenly pop in or out - everything should fade smoothly.
+
+Timeline Section - Make It More Professional
+The current timeline with those pastel colored circles looks too playful. We need something more elegant and professional that shows clear progression.
+Create a horizontal timeline with a gradient line connecting four milestones from left to right. The line should gradient from blue to purple to green, showing progression. Each milestone should have a small dot on the line with a card floating above it.
+The cards should be clean white boxes with subtle shadows, showing:
+
+Week 1: "Setup & Analysis" with description about intent mapping starting
+Week 2-3: "First Citations" with description about initial platform citations
+Month 1: "Visibility Growth" with description about citation increases
+Month 2+: "Market Leadership" with description about dominant positioning
+
+Each card should have a colored label at the top matching the timeline gradient at that point. Use blue for Week 1, purple for Week 2-3, green for Month 1, and amber/orange for Month 2+.
+When hovering over a card, it should lift up slightly and the border should light up with the matching accent color. Keep the design minimal and professional - no fancy decorations, just clean typography and subtle color accents.
+The whole timeline should fit nicely in the viewport and feel like a natural progression from left to right.
+
+Final Demo Section - Make It Fit the Screen
+This section is too tall and requires zooming out to see everything. Compress it so it fits comfortably in a standard desktop viewport without scrolling.
+Reduce the font sizes slightly across the board - the main heading can be smaller, the subheading text can be more compact. The three pillars (Early/Execute/Results) should sit side by side with less spacing between them.
+The "Want to see if your competitors are already there?" box should be more compact - less padding, smaller text, checklist items in two columns instead of stacked.
+Make the CTA button a reasonable width, not stretching too wide. Keep it centered and prominent but proportional.
+The entire section should feel balanced and fit within about 700-720px of vertical space so people can see the whole offer at once without scrolling. Tighten up all the spacing between elements while keeping it readable and not cramped.

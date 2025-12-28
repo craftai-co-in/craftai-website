@@ -1,0 +1,1060 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CraftAI - Transform Intent into AI Visibility | Be the Answer in AI Search</title>
+    <meta name="description" content="CraftAI helps consumer brands become the answer in AI search. From keywords to questions - own the intent-driven conversations your customers have with ChatGPT, Gemini & Perplexity." />
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <script type="module" src="https://static.rocket.new/rocket-web.js?_cfg=https%3A%2F%2Fintentvis1461back.builtwithrocket.new&_be=https%3A%2F%2Fapplication.rocket.new&_v=0.1.9"></script>
+  <script type="module" src="https://static.rocket.new/rocket-shot.js?v=0.0.1"></script>
+  <style>
+    @keyframes fadeInOut {
+        0%, 100% { opacity: 0; transform: translateY(10px); }
+        15%, 85% { opacity: 1; transform: translateY(0); }
+    }
+    
+    @keyframes typewriter {
+        from { width: 0; }
+        to { width: 100%; }
+    }
+    
+    @keyframes blink {
+        0%, 100% { border-color: transparent; }
+        50% { border-color: #3182ce; }
+    }
+    
+    @keyframes floatUp {
+        0% { opacity: 0; transform: translateY(50px); }
+        15% { opacity: 1; transform: translateY(0); }
+        85% { opacity: 1; transform: translateY(-20px); }
+        100% { opacity: 0; transform: translateY(-70px); }
+    }
+    
+    @keyframes shimmer {
+        0% { background-position: -200% 0; }
+        100% { background-position: 200% 0; }
+    }
+    
+    @keyframes countUp {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+    
+    .fact-item {
+        animation: fadeInOut 4s ease-in-out infinite;
+    }
+    
+    .typewriter-container {
+        display: inline-block;
+        overflow: hidden;
+        white-space: nowrap;
+        border-right: 3px solid #3182ce;
+        animation: blink 0.7s infinite;
+    }
+    
+    .floating-question {
+        animation: floatUp 8s ease-in-out infinite;
+    }
+    
+    .floating-question:nth-child(2) {
+        animation-delay: 0.5s;
+    }
+    
+    .skeleton {
+        background: linear-gradient(90deg, #374151 25%, #4b5563 50%, #374151 75%);
+        background-size: 200% 100%;
+        animation: shimmer 1.5s infinite;
+    }
+    
+    .pillar-card {
+        transition: all 0.3s ease;
+    }
+    
+    .pillar-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    }
+    
+    .pillar-card:hover .pillar-number {
+        box-shadow: 0 0 20px rgba(49, 130, 206, 0.5);
+    }
+    
+    .trust-badge {
+        background: linear-gradient(135deg, rgba(49, 130, 206, 0.1) 0%, rgba(99, 179, 237, 0.1) 100%);
+        border: 1px solid rgba(49, 130, 206, 0.3);
+        backdrop-filter: blur(10px);
+    }
+  </style>
+  </head>
+<body class="bg-background">
+<!-- Navigation Header -->
+<nav class="bg-white border-b border-gray-200 sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-16">
+            <div class="flex items-center">
+                <div class="flex-shrink-0">
+                    <svg class="h-8 w-8 text-accent" viewBox="0 0 32 32" fill="currentColor">
+                        <path d="M16 2L3 7v10c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-13-5z"/>
+                        <path d="M14 14l-2-2-1.41 1.41L14 16.83l6-6L18.59 9.41 14 14z" fill="white"/>
+                    </svg>
+                </div>
+                <div class="ml-3">
+                    <span class="text-xl font-bold text-primary">CraftAI</span>
+                </div>
+            </div>
+            <div class="hidden md:block">
+                <div class="ml-10 flex items-baseline space-x-8">
+                    <a href="#solution-demo" class="text-text-secondary hover:text-accent transition-colors">Solution</a>
+                    <a href="#case-studies" class="text-text-secondary hover:text-accent transition-colors">Results</a>
+                    <a href="#framework" class="text-text-secondary hover:text-accent transition-colors">Process</a>
+                    <a href="#faq" class="text-text-secondary hover:text-accent transition-colors">FAQ</a>
+                </div>
+            </div>
+            <div class="flex items-center space-x-4">
+                <button class="btn-primary text-sm">Book 30-min Demo</button>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<!-- Dynamic Fact Display - One at a time, centered with fade transitions -->
+<div class="bg-surface border-b border-gray-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+        <div class="relative h-8 flex items-center justify-center">
+            <div id="fact-1" class="fact-item absolute flex items-center space-x-2 text-sm text-text-secondary opacity-0 transition-all duration-500">
+                <div class="w-2 h-2 bg-success rounded-full animate-pulse"></div>
+                <span><strong class="text-accent">40%</strong> of AI conversations are guidance-seeking</span>
+            </div>
+            <div id="fact-2" class="fact-item absolute flex items-center space-x-2 text-sm text-text-secondary opacity-0 transition-all duration-500">
+                <div class="w-2 h-2 bg-success rounded-full animate-pulse"></div>
+                <span><strong class="text-accent">73%</strong> lack authoritative brand sources</span>
+            </div>
+            <div id="fact-3" class="fact-item absolute flex items-center space-x-2 text-sm text-text-secondary opacity-0 transition-all duration-500">
+                <div class="w-2 h-2 bg-success rounded-full animate-pulse"></div>
+                <span><strong class="text-accent">Early adopters</strong> gaining 340% visibility boost</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Hero Section -->
+<section class="relative bg-gradient-to-br from-gray-900 via-gray-800 to-black overflow-hidden min-h-screen flex items-center">
+    <div class="absolute inset-0 bg-black opacity-20"></div>
+    
+    <!-- Animated background elements -->
+    <div class="absolute inset-0">
+        <div class="absolute top-1/4 left-1/4 w-64 h-64 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
+        <div class="absolute top-1/3 right-1/4 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse delay-1000"></div>
+        <div class="absolute bottom-1/4 left-1/3 w-56 h-56 bg-pink-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse delay-2000"></div>
+    </div>
+
+    <div class="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <!-- Main Heading with Strikethrough Keywords -->
+        <h1 class="text-4xl lg:text-7xl font-bold leading-tight mb-8 text-white">
+            From <span class="line-through text-gray-500">Keywords</span> to 
+            <span class="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">Intent</span>
+        </h1>
+
+        <!-- New Subheading Structure -->
+        <p class="text-xl lg:text-2xl text-gray-300 mb-4 leading-relaxed max-w-3xl mx-auto">
+            Own the intent-driven conversations your customers are having with
+        </p>
+        
+        <!-- Typewriter Animation for Platforms -->
+        <div class="mb-12">
+            <div class="h-16 flex items-center justify-center">
+                <span id="typewriter-text" class="text-2xl lg:text-4xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent typewriter-container"></span>
+            </div>
+        </div>
+
+        <!-- Website Input Field with CTA -->
+        <div class="mb-10 max-w-xl mx-auto">
+            <div class="flex flex-col sm:flex-row gap-3">
+                <input 
+                    type="text" 
+                    id="website-input" 
+                    placeholder="Enter your website" 
+                    class="flex-1 px-6 py-4 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent text-lg"
+                />
+                <button onclick="checkBrandVisibility()" class="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white text-lg px-8 py-4 rounded-full font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg whitespace-nowrap">
+                    Check your Brand Visibility
+                </button>
+            </div>
+        </div>
+
+        <!-- Redesigned Trust Elements -->
+        <div class="flex flex-wrap items-center justify-center gap-6">
+            <div class="trust-badge px-6 py-3 rounded-full flex items-center space-x-3">
+                <div class="w-10 h-10 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center">
+                    <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                    </svg>
+                </div>
+                <div class="text-left">
+                    <div class="text-white font-semibold">We Execute For You</div>
+                    <div class="text-gray-400 text-sm">Full-service implementation</div>
+                </div>
+            </div>
+            <div class="trust-badge px-6 py-3 rounded-full flex items-center space-x-3">
+                <div class="w-10 h-10 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center">
+                    <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"/>
+                    </svg>
+                </div>
+                <div class="text-left">
+                    <div class="text-white font-semibold">Results in 30 Days</div>
+                    <div class="text-gray-400 text-sm">Measurable AI citations</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Customer Questions Showcase - Floating Animation -->
+<section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-8">
+            <h2 class="text-3xl lg:text-4xl font-bold text-primary mb-4">
+                No More Google Search for Best Brands
+            </h2>
+            <p class="text-lg text-text-secondary max-w-2xl mx-auto">
+                Your customers are no longer typing into Google. They're having conversations with AI - asking for recommendations, seeking guidance, and trusting the answers they receive.
+            </p>
+        </div>
+        
+        <!-- Floating Questions Container -->
+        <div class="relative max-w-4xl mx-auto mb-12 h-96 overflow-hidden">
+            <div id="floating-questions-container" class="relative h-full">
+                <!-- Questions will be dynamically inserted here -->
+            </div>
+        </div>
+
+        <!-- Text below floating questions -->
+        <p class="text-xl text-text-secondary max-w-3xl mx-auto text-center">
+            These intent-driven conversations represent missed revenue opportunities
+        </p>
+    </div>
+</section>
+
+<!-- AI Visibility Dashboard Preview -->
+<section id="solution-demo" class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl lg:text-4xl font-bold text-primary mb-4">
+                Your Category Leaders Are Dominating AI Conversations
+            </h2>
+            <p class="text-xl text-text-secondary max-w-3xl mx-auto">
+                See how top performers in your industry are capturing AI visibility while others remain invisible
+            </p>
+        </div>
+
+        <div class="bg-gray-900 rounded-lg p-8 mb-8">
+            <div class="flex items-center justify-between mb-6">
+                <div class="flex items-center space-x-3">
+                    <div class="w-3 h-3 bg-red-400 rounded-full"></div>
+                    <div class="w-3 h-3 bg-yellow-400 rounded-full"></div>
+                    <div class="w-3 h-3 bg-green-400 rounded-full"></div>
+                </div>
+                <div class="text-white text-sm">Category Leader Performance - Live AI Visibility</div>
+            </div>
+
+            <div id="dashboard-content" class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-gray-800 rounded-lg p-6">
+                    <div class="text-3xl font-bold text-accent mb-2 counter-value" data-target="86">
+                        <span class="skeleton h-8 w-16 rounded inline-block"></span>
+                    </div>
+                    <div class="text-white text-sm font-medium mb-1">Share of Voice</div>
+                    <div class="text-gray-400 text-xs">Category leader benchmark</div>
+                </div>
+                <div class="bg-gray-800 rounded-lg p-6">
+                    <div class="text-3xl font-bold text-success mb-2 counter-value" data-target="12400">
+                        <span class="skeleton h-8 w-20 rounded inline-block"></span>
+                    </div>
+                    <div class="text-white text-sm font-medium mb-1">AI Visibility</div>
+                    <div class="text-gray-400 text-xs">mentions last month</div>
+                </div>
+                <div class="bg-gray-800 rounded-lg p-6">
+                    <div class="text-3xl font-bold text-warning mb-2 counter-value" data-target="340" data-prefix="+" data-suffix="%">
+                        <span class="skeleton h-8 w-16 rounded inline-block"></span>
+                    </div>
+                    <div class="text-white text-sm font-medium mb-1">Citations & Mentions</div>
+                    <div class="text-gray-400 text-xs">growth (60 days)</div>
+                </div>
+                <div class="bg-gray-800 rounded-lg p-6">
+                    <div class="text-3xl font-bold text-blue-400 mb-2">
+                        <span class="skeleton h-8 w-24 rounded inline-block" id="market-position-skeleton"></span>
+                        <span id="market-position" class="hidden">Leader</span>
+                    </div>
+                    <div class="text-white text-sm font-medium mb-1">Competitor Analysis</div>
+                    <div class="text-gray-400 text-xs">Market leader position</div>
+                </div>
+            </div>
+
+            <div class="mt-8 grid md:grid-cols-2 gap-6">
+                <div class="bg-gray-800 rounded-lg p-6">
+                    <h4 class="text-white font-semibold mb-4">Platform Execution</h4>
+                    <div class="space-y-3">
+                        <div class="flex items-center justify-between">
+                            <span class="text-gray-300">ChatGPT Citations</span>
+                            <div class="flex items-center space-x-2">
+                                <div class="w-20 bg-gray-700 rounded-full h-2">
+                                    <div class="bg-accent h-2 rounded-full platform-bar" data-width="65" style="width: 0%"></div>
+                                </div>
+                                <span class="text-white text-sm">65%</span>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span class="text-gray-300">Gemini Mentions</span>
+                            <div class="flex items-center space-x-2">
+                                <div class="w-20 bg-gray-700 rounded-full h-2">
+                                    <div class="bg-success h-2 rounded-full platform-bar" data-width="38" style="width: 0%"></div>
+                                </div>
+                                <span class="text-white text-sm">38%</span>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span class="text-gray-300">Perplexity References</span>
+                            <div class="flex items-center space-x-2">
+                                <div class="w-20 bg-gray-700 rounded-full h-2">
+                                    <div class="bg-warning h-2 rounded-full platform-bar" data-width="45" style="width: 0%"></div>
+                                </div>
+                                <span class="text-white text-sm">45%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-gray-800 rounded-lg p-6">
+                    <h4 class="text-white font-semibold mb-4">Competitive Position</h4>
+                    <div class="space-y-3">
+                        <div class="flex items-center justify-between p-2 bg-gradient-to-r from-green-900/50 to-green-800/30 rounded border border-green-500/30">
+                            <span class="text-gray-300">Category Leader A</span>
+                            <span class="text-success font-semibold">Dominant position</span>
+                        </div>
+                        <div class="flex items-center justify-between p-2 bg-gradient-to-r from-blue-900/50 to-blue-800/30 rounded border border-blue-500/30">
+                            <span class="text-gray-300">Category Leader B</span>
+                            <span class="text-blue-400 font-semibold">Strong presence</span>
+                        </div>
+                        <div class="flex items-center justify-between p-2 bg-gradient-to-r from-red-900/50 to-red-800/30 rounded border border-red-500/30">
+                            <span class="text-gray-300">Everyone Else</span>
+                            <span class="text-red-400 font-semibold">Fighting for scraps</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Dashboard Input and CTA -->
+        <div class="text-center max-w-2xl mx-auto">
+            <p class="text-text-secondary mb-4">Want to see how your category leaders perform?</p>
+            <div class="flex flex-col sm:flex-row gap-3 justify-center">
+                <input 
+                    type="text" 
+                    id="category-leader-input" 
+                    placeholder="Enter your category leader brand" 
+                    class="flex-1 px-6 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent"
+                />
+                <button onclick="analyzePosition()" class="btn-primary px-8 py-3">Analyze Their Position</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Four-Pillar Framework - Diagonal Ascending Layout -->
+<section id="framework" class="py-20 bg-gray-900 relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl lg:text-4xl font-bold text-white mb-4">
+                How We Turn Intent Into Authority
+            </h2>
+            <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+                A framework that connects real customer questions to your brand
+            </p>
+        </div>
+
+        <!-- Diagonal Ascending Pillar Layout -->
+        <div class="relative max-w-6xl mx-auto">
+            <!-- Connecting Line (Visual) -->
+            <div class="hidden lg:block absolute inset-0">
+                <svg class="w-full h-full" viewBox="0 0 1000 500" preserveAspectRatio="none">
+                    <path d="M100,400 Q300,350 400,300 Q500,250 600,200 Q700,150 900,100" stroke="url(#gradient)" stroke-width="3" fill="none" stroke-dasharray="10,5"/>
+                    <defs>
+                        <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                            <stop offset="0%" style="stop-color:#3182ce"/>
+                            <stop offset="100%" style="stop-color:#805ad5"/>
+                        </linearGradient>
+                    </defs>
+                </svg>
+            </div>
+
+            <!-- Pillar Cards in Diagonal Pattern -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 relative">
+                <!-- Pillar 01 - Bottom Left -->
+                <div class="lg:mt-48 pillar-card">
+                    <div class="relative bg-white rounded-xl p-6 shadow-lg">
+                        <div class="pillar-number absolute -top-4 -left-2 w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center z-10 transition-all duration-300">
+                            <span class="text-white text-lg font-bold">01</span>
+                        </div>
+                        <div class="pt-4">
+                            <h3 class="text-lg font-bold text-gray-800 mb-3">Map Real Customer Intent</h3>
+                            <p class="text-gray-600 text-sm leading-relaxed mb-4">
+                                We analyze thousands of conversations across Reddit and forums to identify exact questions your customers ask. Using conversation analysis, we map customer problems to your solutions—creating a strategic intent blueprint.
+                            </p>
+                            <div class="bg-blue-50 rounded-lg px-4 py-2 inline-block">
+                                <span class="text-accent font-semibold text-sm">2,500+ questions analyzed per brand</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pillar 02 -->
+                <div class="lg:mt-32 pillar-card">
+                    <div class="relative bg-white rounded-xl p-6 shadow-lg">
+                        <div class="pillar-number absolute -top-4 -left-2 w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center z-10 transition-all duration-300">
+                            <span class="text-white text-lg font-bold">02</span>
+                        </div>
+                        <div class="pt-4">
+                            <h3 class="text-lg font-bold text-gray-800 mb-3">Build Trust Where It Matters</h3>
+                            <p class="text-gray-600 text-sm leading-relaxed mb-4">
+                                Reddit-first approach: identify high-intent discussions where your audience seeks guidance, then engage authentically. No spam, no shortcuts—just genuine expertise that builds credibility.
+                            </p>
+                            <div class="bg-green-50 rounded-lg px-4 py-2 inline-block">
+                                <span class="text-success font-semibold text-sm">150+ authentic engagements monthly</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pillar 03 -->
+                <div class="lg:mt-16 pillar-card">
+                    <div class="relative bg-white rounded-xl p-6 shadow-lg">
+                        <div class="pillar-number absolute -top-4 -left-2 w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center z-10 transition-all duration-300">
+                            <span class="text-white text-lg font-bold">03</span>
+                        </div>
+                        <div class="pt-4">
+                            <h3 class="text-lg font-bold text-gray-800 mb-3">Create Content That Converts Intent</h3>
+                            <p class="text-gray-600 text-sm leading-relaxed mb-4">
+                                Every piece directly answers real customer questions. Using Jobs-to-be-Done and StoryBrand frameworks, we craft authoritative resources that bridge customer problems to your expertise—optimized for AI platforms.
+                            </p>
+                            <div class="bg-yellow-50 rounded-lg px-4 py-2 inline-block">
+                                <span class="text-warning font-semibold text-sm">15-20 intent-optimized assets/month</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pillar 04 - Top Right -->
+                <div class="lg:mt-0 pillar-card">
+                    <div class="relative bg-white rounded-xl p-6 shadow-lg">
+                        <div class="pillar-number absolute -top-4 -left-2 w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center z-10 transition-all duration-300">
+                            <span class="text-white text-lg font-bold">04</span>
+                        </div>
+                        <div class="pt-4">
+                            <h3 class="text-lg font-bold text-gray-800 mb-3">Systematically Dominate AI Search</h3>
+                            <p class="text-gray-600 text-sm leading-relaxed mb-4">
+                                Through strategic content placement and continuous testing, your brand becomes the authoritative answer across ChatGPT, Gemini, and Perplexity. We track every citation and refine weekly—making AEO a predictable growth channel.
+                            </p>
+                            <div class="bg-purple-50 rounded-lg px-4 py-2 inline-block">
+                                <span class="text-purple-600 font-semibold text-sm">260% citation growth in 60 days</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Before vs After Results -->
+<section class="py-20 bg-surface">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl lg:text-4xl font-bold text-primary mb-4">
+                Before vs. After: Real Client Results
+            </h2>
+            <p class="text-xl text-text-secondary max-w-3xl mx-auto">
+                See the dramatic transformation when brands partner with CraftAI
+            </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">
+            <div>
+                <h4 class="font-semibold text-text-secondary mb-6 text-center text-lg">Before: Invisible in AI Search</h4>
+                <div class="bg-white rounded-lg p-8 border-2 border-red-200 shadow-lg">
+                    <div class="grid grid-cols-2 gap-6">
+                        <div class="text-center">
+                            <div class="text-4xl font-bold text-error mb-3">0%</div>
+                            <div class="text-sm text-text-secondary">AI Citations</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-4xl font-bold text-error mb-3">0</div>
+                            <div class="text-sm text-text-secondary">Intent Capture</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-4xl font-bold text-warning mb-3">-15%</div>
+                            <div class="text-sm text-text-secondary">Market Share</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-4xl font-bold text-error mb-3">0</div>
+                            <div class="text-sm text-text-secondary">AI-Driven Leads</div>
+                        </div>
+                    </div>
+                    <div class="mt-6 p-4 bg-red-50 rounded-lg">
+                        <p class="text-sm text-red-700 text-center italic">
+                            "Customers ask AI about our industry, but our brand never comes up. We're losing market share to competitors who don't even have better products."
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <h4 class="font-semibold text-text-secondary mb-6 text-center text-lg">After: CraftAI Execution</h4>
+                <div class="bg-white rounded-lg p-8 border-2 border-success shadow-lg">
+                    <div class="grid grid-cols-2 gap-6">
+                        <div class="text-center">
+                            <div class="text-4xl font-bold text-success mb-3">73%</div>
+                            <div class="text-sm text-text-secondary">AI Citation Rate</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-4xl font-bold text-success mb-3">247</div>
+                            <div class="text-sm text-text-secondary">Intent Opportunities</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-4xl font-bold text-success mb-3">+340%</div>
+                            <div class="text-sm text-text-secondary">Total Growth</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-4xl font-bold text-success mb-3">89</div>
+                            <div class="text-sm text-text-secondary">AI-Driven Leads/Month</div>
+                        </div>
+                    </div>
+                    <div class="mt-6 p-4 bg-green-50 rounded-lg">
+                        <p class="text-sm text-green-700 text-center italic">
+                            "Now when customers ask AI for solutions in our space, we're cited as the authoritative answer 73% of the time. Our consultation bookings have exploded."
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Results Timeline -->
+        <div class="mt-16 bg-white rounded-lg p-8 max-w-4xl mx-auto">
+            <h3 class="text-2xl font-bold text-primary text-center mb-8">Typical Results Timeline</h3>
+            <div class="grid md:grid-cols-4 gap-6">
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-blue-600 font-bold">Week 1</span>
+                    </div>
+                    <h4 class="font-semibold text-primary mb-2">Setup & Analysis</h4>
+                    <p class="text-sm text-text-secondary">Intent mapping and competitor analysis begins</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-yellow-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-yellow-600 font-bold">Week 2-3</span>
+                    </div>
+                    <h4 class="font-semibold text-primary mb-2">First Citations</h4>
+                    <p class="text-sm text-text-secondary">Initial AI platform citations appear</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-green-600 font-bold">Month 1</span>
+                    </div>
+                    <h4 class="font-semibold text-primary mb-2">Visibility Growth</h4>
+                    <p class="text-sm text-text-secondary">Significant citation increase across platforms</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-purple-600 font-bold">Month 2+</span>
+                    </div>
+                    <h4 class="font-semibold text-primary mb-2">Market Leadership</h4>
+                    <p class="text-sm text-text-secondary">Dominant position in AI search results</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Final CTA Section -->
+<section class="py-20 bg-gradient-to-r from-primary to-secondary">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div class="bg-white rounded-lg p-12 shadow-2xl">
+            <div class="flex items-center justify-center space-x-2 mb-6">
+                <div class="w-3 h-3 bg-warning rounded-full animate-pulse"></div>
+                <span class="text-warning font-semibold text-lg">RIDE THE NEW WAVE</span>
+            </div>
+            
+            <h2 class="text-3xl lg:text-5xl font-bold text-primary mb-6">
+                Ready to Become the Answer?
+            </h2>
+            
+            <p class="text-xl text-text-secondary mb-8 max-w-2xl mx-auto">
+                Get ahead of your competitors before they realize this massive opportunity exists. Be early, not reactive.
+            </p>
+            
+            <div class="grid md:grid-cols-3 gap-8 mb-10">
+                <div class="text-center">
+                    <div class="text-3xl font-bold text-accent mb-2">Early</div>
+                    <div class="text-text-secondary">Competitive Advantage</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-3xl font-bold text-success mb-2">Execute</div>
+                    <div class="text-text-secondary">Not Just Data</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-3xl font-bold text-warning mb-2">Results</div>
+                    <div class="text-text-secondary">Within 30 Days</div>
+                </div>
+            </div>
+
+            <div class="bg-surface rounded-lg p-6 mb-8">
+                <h3 class="font-semibold text-primary mb-4 text-lg">Want to see if your competitors are already there?</h3>
+                <div class="grid md:grid-cols-2 gap-4 text-left max-w-lg mx-auto">
+                    <div class="flex items-center space-x-2">
+                        <svg class="w-5 h-5 text-success flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                        </svg>
+                        <span>Free competitor AI visibility analysis</span>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                        <svg class="w-5 h-5 text-success flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                        </svg>
+                        <span>Intent gap opportunity mapping</span>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                        <svg class="w-5 h-5 text-success flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                        </svg>
+                        <span>30-minute strategic consultation</span>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                        <svg class="w-5 h-5 text-success flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                        </svg>
+                        <span>Execution roadmap preview</span>
+                    </div>
+                </div>
+            </div>
+
+            <button class="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white text-xl px-12 py-5 rounded-full font-semibold mb-4 transition-all duration-300 transform hover:scale-105 shadow-lg">
+                Book Your 30-Minute Demo
+            </button>
+            
+            <p class="text-text-secondary text-sm">No credit card required • Free analysis • See exactly how we execute</p>
+        </div>
+    </div>
+</section>
+
+<!-- FAQ Section -->
+<section id="faq" class="py-20 bg-surface">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+            <div class="text-sm font-medium text-text-secondary mb-2">FAQ</div>
+            <h2 class="text-3xl lg:text-4xl font-bold text-primary mb-4">
+                Questions about CraftAI?
+            </h2>
+            <p class="text-xl text-text-secondary">
+                Everything you need to know about becoming the authoritative answer in AI search
+            </p>
+        </div>
+
+        <!-- FAQ Toggle Button -->
+        <div class="text-center mb-8">
+            <button id="toggle-faq" class="bg-accent text-white px-6 py-3 rounded-lg font-medium hover:bg-blue-700 transition-colors flex items-center mx-auto">
+                <span>View Frequently Asked Questions</span>
+                <svg id="faq-toggle-icon" class="ml-2 w-5 h-5 transform transition-transform" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                </svg>
+            </button>
+        </div>
+
+        <!-- FAQ Content (Hidden by default) -->
+        <div id="faq-content" class="hidden space-y-6">
+            <div class="bg-white rounded-lg border border-gray-200">
+                <button class="w-full px-6 py-4 text-left flex items-center justify-between" onclick="toggleFAQ('faq1')">
+                    <span class="font-semibold text-primary">How is CraftAI different from traditional SEO agencies?</span>
+                    <svg class="w-5 h-5 text-text-secondary transform transition-transform" id="faq1-icon" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                    </svg>
+                </button>
+                <div id="faq1" class="hidden px-6 pb-4">
+                    <p class="text-text-secondary">Traditional SEO targets Google search rankings. CraftAI executes intent-to-visibility programs that make your brand the authoritative answer when customers ask AI platforms like ChatGPT, Gemini, and Perplexity for guidance. We don't just provide data - we execute the entire program for you.</p>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-lg border border-gray-200">
+                <button class="w-full px-6 py-4 text-left flex items-center justify-between" onclick="toggleFAQ('faq2')">
+                    <span class="font-semibold text-primary">What does "we execute for you" actually mean?</span>
+                    <svg class="w-5 h-5 text-text-secondary transform transition-transform" id="faq2-icon" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                    </svg>
+                </button>
+                <div id="faq2" class="hidden px-6 pb-4">
+                    <p class="text-text-secondary">We handle everything: intent mapping, community engagement, content creation, and visibility amplification. You don't need to hire new team members or learn new tools. We execute the complete program while you focus on running your business. You just watch the citations and leads grow.</p>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-lg border border-gray-200">
+                <button class="w-full px-6 py-4 text-left flex items-center justify-between" onclick="toggleFAQ('faq3')">
+                    <span class="font-semibold text-primary">How quickly will I see results?</span>
+                    <svg class="w-5 h-5 text-text-secondary transform transition-transform" id="faq3-icon" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                    </svg>
+                </button>
+                <div id="faq3" class="hidden px-6 pb-4">
+                    <p class="text-text-secondary">Most clients see initial AI platform citations within 2-3 weeks. Significant visibility growth occurs within 30-45 days. Unlike traditional SEO which takes 6-12 months, AI search optimization delivers faster results because AI platforms update their knowledge more frequently than Google algorithm changes.</p>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-lg border border-gray-200">
+                <button class="w-full px-6 py-4 text-left flex items-center justify-between" onclick="toggleFAQ('faq4')">
+                    <span class="font-semibold text-primary">Which types of brands see the best results?</span>
+                    <svg class="w-5 h-5 text-text-secondary transform transition-transform" id="faq4-icon" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                    </svg>
+                </button>
+                <div id="faq4" class="hidden px-6 pb-4">
+                    <p class="text-text-secondary">Indian consumer brands with product-market fit, 2-10 years old, premium or tech-forward audiences see exceptional results. Industries where customers ask "What's the best..." or "How do I..." questions to AI platforms have massive opportunity: health & wellness, fitness, pet care, beauty, finance, and technology.</p>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-lg border border-gray-200">
+                <button class="w-full px-6 py-4 text-left flex items-center justify-between" onclick="toggleFAQ('faq5')">
+                    <span class="font-semibold text-primary">How do you measure success and ROI?</span>
+                    <svg class="w-5 h-5 text-text-secondary transform transition-transform" id="faq5-icon" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                    </svg>
+                </button>
+                <div id="faq5" class="hidden px-6 pb-4">
+                    <p class="text-text-secondary">We track measurable AI visibility, citations, mentions, and most importantly - the business impact: leads, consultations, and revenue attributed to AI search visibility. Our dashboard provides real-time metrics showing your share of voice across AI platforms and competitive positioning.</p>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-lg border border-gray-200">
+                <button class="w-full px-6 py-4 text-left flex items-center justify-between" onclick="toggleFAQ('faq6')">
+                    <span class="font-semibold text-primary">Why should I act now vs. wait?</span>
+                    <svg class="w-5 h-5 text-text-secondary transform transition-transform" id="faq6-icon" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                    </svg>
+                </button>
+                <div id="faq6" class="hidden px-6 pb-4">
+                    <p class="text-text-secondary">AI search is growing exponentially - ChatGPT alone has 200M+ weekly users. Early movers are establishing authority positions that will be extremely difficult for latecomers to challenge. The brands capturing AI mindshare now will have compounding advantages while competitors are still focused on yesterday's tactics.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-primary py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col md:flex-row justify-between items-center">
+            <div class="flex items-center mb-4 md:mb-0">
+                <svg class="h-8 w-8 text-accent" viewBox="0 0 32 32" fill="currentColor">
+                    <path d="M16 2L3 7v10c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-13-5z"/>
+                    <path d="M14 14l-2-2-1.41 1.41L14 16.83l6-6L18.59 9.41 14 14z" fill="white"/>
+                </svg>
+                <span class="ml-3 text-xl font-bold text-white">CraftAI</span>
+            </div>
+            <div class="text-gray-400 text-sm">
+                © 2025 CraftAI. All rights reserved.
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- Floating Notification Bar -->
+<div id="notification-bar" class="hidden fixed bottom-4 left-4 bg-white rounded-lg shadow-lg p-4 border border-gray-200 max-w-xs z-50">
+</div>
+
+<script>
+// Dynamic Fact Display - Fade in/out one at a time
+const facts = ['fact-1', 'fact-2', 'fact-3'];
+let currentFact = 0;
+
+function rotateFacts() {
+    facts.forEach((factId, index) => {
+        const element = document.getElementById(factId);
+        if (element) {
+            if (index === currentFact) {
+                element.style.transition = 'opacity 0.5s ease-in-out, transform 0.5s ease-in-out';
+                element.style.opacity = '1';
+                element.style.transform = 'translateY(0)';
+            } else {
+                element.style.transition = 'opacity 0.5s ease-in-out, transform 0.5s ease-in-out';
+                element.style.opacity = '0';
+                element.style.transform = 'translateY(10px)';
+            }
+        }
+    });
+    currentFact = (currentFact + 1) % facts.length;
+}
+
+rotateFacts();
+setInterval(rotateFacts, 4000);
+
+// Typewriter Animation for Platforms
+const platforms = ['ChatGPT', 'Perplexity', 'Gemini', 'Claude', 'Copilot'];
+let platformIndex = 0;
+let charIndex = 0;
+let isDeleting = false;
+const typewriterElement = document.getElementById('typewriter-text');
+
+function typeWriter() {
+    if (!typewriterElement) return;
+    
+    const currentPlatform = platforms[platformIndex];
+    
+    if (isDeleting) {
+        typewriterElement.textContent = currentPlatform.substring(0, charIndex - 1);
+        charIndex--;
+    } else {
+        typewriterElement.textContent = currentPlatform.substring(0, charIndex + 1);
+        charIndex++;
+    }
+    
+    let typeSpeed = isDeleting ? 50 : 100;
+    
+    if (!isDeleting && charIndex === currentPlatform.length) {
+        typeSpeed = 2000;
+        isDeleting = true;
+    } else if (isDeleting && charIndex === 0) {
+        isDeleting = false;
+        platformIndex = (platformIndex + 1) % platforms.length;
+        typeSpeed = 500;
+    }
+    
+    setTimeout(typeWriter, typeSpeed);
+}
+
+typeWriter();
+
+// Floating Questions Animation
+const questions = [
+    { text: "My stomach feels bloated after dinner. What natural remedies actually work for digestion?", insight: "High intent - Wellness brands missing" },
+    { text: "My dog has itchy skin and keeps scratching. What food ingredients should I avoid?", insight: "Opportunity: Pet care brands invisible" },
+    { text: "My 8-month-old refuses most foods. What are safe, tasty first foods that babies actually eat?", insight: "Market Gap: Baby food brands invisible" },
+    { text: "I want to gain muscle but hate protein powders. What are better alternatives?", insight: "Revenue Opportunity: Fitness brands can own this" },
+    { text: "I wake up with neck pain most mornings. Should I get a different pillow?", insight: "Intent Score: 9/10 - Ready to purchase" },
+    { text: "My hair is frizzy because of the humidity. Are there any good anti-frizz serums?", insight: "Location Intent: India market opportunity" }
+];
+
+let questionPairIndex = 0;
+
+function createFloatingQuestions() {
+    const container = document.getElementById('floating-questions-container');
+    if (!container) return;
+    
+    container.innerHTML = '';
+    
+    const pair1Index = questionPairIndex * 2;
+    const pair2Index = pair1Index + 1;
+    
+    if (pair1Index < questions.length) {
+        const q1 = createQuestionCard(questions[pair1Index], 0);
+        container.appendChild(q1);
+    }
+    
+    if (pair2Index < questions.length) {
+        const q2 = createQuestionCard(questions[pair2Index], 1);
+        container.appendChild(q2);
+    }
+    
+    questionPairIndex = (questionPairIndex + 1) % Math.ceil(questions.length / 2);
+}
+
+function createQuestionCard(question, delay) {
+    const card = document.createElement('div');
+    card.className = `absolute left-1/2 transform -translate-x-1/2 w-full max-w-md bg-white rounded-lg shadow-lg p-6 cursor-pointer transition-all duration-300 hover:shadow-xl hover:scale-105 group`;
+    card.style.top = delay === 0 ? '20%' : '55%';
+    card.style.animation = `floatUp 8s ease-in-out infinite ${delay * 0.5}s`;
+    
+    card.innerHTML = `
+        <div class="bg-gray-50 p-4 rounded-lg mb-3">
+            <p class="text-gray-800 italic">"${question.text}"</p>
+        </div>
+        <div class="opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            <div class="text-sm text-gray-500 mb-1">Insight:</div>
+            <div class="text-sm text-green-600 font-medium">${question.insight}</div>
+        </div>
+    `;
+    
+    return card;
+}
+
+createFloatingQuestions();
+setInterval(createFloatingQuestions, 8000);
+
+// Dashboard Counter Animation with Skeleton Loading
+function animateCounters() {
+    const counters = document.querySelectorAll('.counter-value');
+    
+    setTimeout(() => {
+        counters.forEach(counter => {
+            const target = parseInt(counter.dataset.target);
+            const prefix = counter.dataset.prefix || '';
+            const suffix = counter.dataset.suffix || '';
+            const skeleton = counter.querySelector('.skeleton');
+            
+            if (skeleton) skeleton.remove();
+            
+            let current = 0;
+            const increment = target / 50;
+            const timer = setInterval(() => {
+                current += increment;
+                if (current >= target) {
+                    counter.textContent = prefix + target.toLocaleString() + suffix;
+                    clearInterval(timer);
+                } else {
+                    counter.textContent = prefix + Math.floor(current).toLocaleString() + suffix;
+                }
+            }, 40);
+        });
+        
+        const marketPosition = document.getElementById('market-position');
+        const marketSkeleton = document.getElementById('market-position-skeleton');
+        if (marketPosition && marketSkeleton) {
+            marketSkeleton.classList.add('hidden');
+            marketPosition.classList.remove('hidden');
+        }
+        
+        document.querySelectorAll('.platform-bar').forEach(bar => {
+            const width = bar.dataset.width;
+            bar.style.transition = 'width 1s ease-out';
+            bar.style.width = width + '%';
+        });
+    }, 1500);
+}
+
+const observerOptions = {
+    threshold: 0.3
+};
+
+const dashboardObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            animateCounters();
+            dashboardObserver.unobserve(entry.target);
+        }
+    });
+}, observerOptions);
+
+const dashboardSection = document.getElementById('solution-demo');
+if (dashboardSection) {
+    dashboardObserver.observe(dashboardSection);
+}
+
+// Brand Visibility Check Function
+function checkBrandVisibility() {
+    const website = document.getElementById('website-input')?.value;
+    if (!website) {
+        alert('Please enter your website to check brand visibility');
+        return;
+    }
+    
+    const dashboardSection = document.getElementById('solution-demo');
+    if (dashboardSection) {
+        dashboardSection.scrollIntoView({ behavior: 'smooth' });
+    }
+}
+
+// Analyze Position Function
+function analyzePosition() {
+    const brand = document.getElementById('category-leader-input')?.value;
+    if (!brand) {
+        alert('Please enter a category leader brand to analyze');
+        return;
+    }
+    
+    alert(`Analyzing AI visibility position for: ${brand}\n\nOur team will prepare a detailed competitive analysis. Book a demo to see the full insights.`);
+}
+
+// FAQ Section Toggle Functionality
+document.getElementById('toggle-faq')?.addEventListener('click', function() {
+    const content = document.getElementById('faq-content');
+    const icon = document.getElementById('faq-toggle-icon');
+    const button = this;
+    
+    if (content && icon) {
+        if (content.classList.contains('hidden')) {
+            content.classList.remove('hidden');
+            icon.style.transform = 'rotate(180deg)';
+            button.innerHTML = '<span>Hide Frequently Asked Questions</span><svg id="faq-toggle-icon" class="ml-2 w-5 h-5 transform transition-transform" style="transform: rotate(180deg)" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>';
+        } else {
+            content.classList.add('hidden');
+            icon.style.transform = 'rotate(0deg)';
+            button.innerHTML = '<span>View Frequently Asked Questions</span><svg id="faq-toggle-icon" class="ml-2 w-5 h-5 transform transition-transform" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>';
+        }
+    }
+});
+
+// Individual FAQ toggle functionality
+function toggleFAQ(id) {
+    const element = document.getElementById(id);
+    const icon = document.getElementById(id + '-icon');
+    
+    if (element && icon) {
+        if (element.classList.contains('hidden')) {
+            element.classList.remove('hidden');
+            icon.style.transform = 'rotate(180deg)';
+        } else {
+            element.classList.add('hidden');
+            icon.style.transform = 'rotate(0deg)';
+        }
+    }
+}
+
+// Floating social proof notifications
+const notifications = [
+    { company: 'HealthTech Brand', action: 'booked demo consultation' },
+    { company: 'Premium Pet Care', action: 'started CraftAI program' },
+    { company: 'Fitness Startup', action: 'saw 340% growth' },
+    { company: 'Beauty Brand', action: 'gained AI citations' }
+];
+
+let notificationIndex = 0;
+function showNotification() {
+    const notification = notifications[notificationIndex];
+    const bar = document.getElementById('notification-bar');
+    if (bar) {
+        bar.innerHTML = `
+            <div class="flex items-center space-x-3">
+                <div class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
+                <div class="text-sm">
+                    <div class="font-semibold text-gray-800">${notification.company} just ${notification.action.split(' ')[0]}</div>
+                    <div class="text-gray-500">${notification.action.substring(notification.action.indexOf(' ') + 1)}</div>
+                </div>
+            </div>
+        `;
+        bar.classList.remove('hidden');
+        
+        setTimeout(() => {
+            bar.classList.add('hidden');
+        }, 4000);
+    }
+    
+    notificationIndex = (notificationIndex + 1) % notifications.length;
+}
+
+setInterval(showNotification, 10000);
+setTimeout(showNotification, 5000);
+
+// Smooth scrolling for anchor links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+            target.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
+    });
+});
+</script>
+<script id="dhws-dataInjector" src="../public/dhws-data-injector.js"></script>
+</body>
+</html>

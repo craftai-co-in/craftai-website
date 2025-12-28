@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Primary Colors */
+  --color-primary: #1a365d; /* Deep navy for authority and trust */
+  --color-secondary: #2d3748; /* Supporting professional hierarchy */
+  --color-accent: #3182ce; /* Conversion moments and key metrics */
+  
+  /* Background Colors */
+  --color-background: #ffffff; /* Clean canvas for content focus */
+  --color-surface: #f7fafc; /* Subtle section separation */
+  
+  /* Text Colors */
+  --color-text-primary: #1a202c; /* Maximum contrast for scanning */
+  --color-text-secondary: #4a5568; /* Supporting without distraction */
+  
+  /* Status Colors */
+  --color-success: #38a169; /* Positive metric reinforcement */
+  --color-warning: #d69e2e; /* Urgency elements only */
+  --color-error: #e53e3e; /* Form validation feedback */
+  
+  /* Border Colors */
+  --color-border: #e2e8f0; /* Form fields and data visualization containers */
+  
+  /* Shadow Variables */
+  --shadow-sm: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+@layer base {
+  body {
+    font-family: 'Inter', sans-serif;
+    color: var(--color-text-primary);
+    background-color: var(--color-background);
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    color: var(--color-text-primary);
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-accent text-white font-semibold px-6 py-3 rounded-lg;
+    @apply hover:bg-blue-600 hover:-translate-y-0.5;
+    @apply transition-all duration-200 ease-in-out;
+    box-shadow: var(--shadow-sm);
+  }
+  
+  .btn-secondary {
+    @apply bg-secondary text-white font-semibold px-6 py-3 rounded-lg;
+    @apply hover:bg-gray-700 hover:-translate-y-0.5;
+    @apply transition-all duration-200 ease-in-out;
+    box-shadow: var(--shadow-sm);
+  }
+  
+  .card {
+    @apply bg-white rounded-lg border border-gray-200 p-6;
+    box-shadow: var(--shadow-sm);
+  }
+  
+  .dashboard-preview {
+    box-shadow: var(--shadow-lg);
+  }
+  
+  .metric-card {
+    @apply bg-white rounded-lg p-4 border border-gray-200;
+    box-shadow: var(--shadow-sm);
+  }
+  
+  .form-input {
+    @apply w-full px-4 py-3 border border-gray-200 rounded-lg;
+    @apply focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent;
+    @apply transition-all duration-200 ease-in-out;
+  }
+  
+  .section-divider {
+    @apply bg-surface;
+  }
+  
+  .mono-text {
+    font-family: 'JetBrains Mono', monospace;
+  }
+}
+
+@layer utilities {
+  .text-primary {
+    color: var(--color-primary);
+  }
+  
+  .text-secondary {
+    color: var(--color-secondary);
+  }
+  
+  .text-accent {
+    color: var(--color-accent);
+  }
+  
+  .text-success {
+    color: var(--color-success);
+  }
+  
+  .text-warning {
+    color: var(--color-warning);
+  }
+  
+  .text-error {
+    color: var(--color-error);
+  }
+  
+  .bg-primary {
+    background-color: var(--color-primary);
+  }
+  
+  .bg-secondary {
+    background-color: var(--color-secondary);
+  }
+  
+  .bg-accent {
+    background-color: var(--color-accent);
+  }
+  
+  .bg-surface {
+    background-color: var(--color-surface);
+  }
+  
+  .bg-success {
+    background-color: var(--color-success);
+  }
+  
+  .bg-warning {
+    background-color: var(--color-warning);
+  }
+  
+  .bg-error {
+    background-color: var(--color-error);
+  }
+  
+  .border-default {
+    border-color: var(--color-border);
+  }
+}

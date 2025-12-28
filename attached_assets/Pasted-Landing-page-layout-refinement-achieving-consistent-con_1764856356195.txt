@@ -1,0 +1,119 @@
+Landing page layout refinement - achieving consistent content width and proportional scaling across all sections.
+
+CRITICAL UNDERSTANDING:
+The hero and sub-hero sections currently use approximately 70% of the screen width with proper margins on both sides. All sections below must match this exact width constraint. Currently, the dashboard and process sections are stretching to nearly 100% width, which breaks visual consistency. We need to scale these sections down proportionally - reducing both WIDTH and HEIGHT together - to maintain elegant proportions while achieving layout harmony.
+
+
+GLOBAL LAYOUT RULES:
+
+1. Width Consistency (PRIMARY ISSUE):
+   - Measure the max-width of your hero section (the "From Keywords to Intent" dark section)
+   - Apply this EXACT same max-width container to every section below
+   - All sections must be centered with equal left/right margins
+   - No section should stretch wider than ~70% of viewport width
+   - This creates a consistent vertical content column
+
+2. Proportional Scaling:
+   - When reducing size, reduce both width AND height together
+   - Scale content down uniformly (like zooming out) rather than squeezing only one dimension
+   - Maintain aspect ratios and visual balance
+   - Think of this as applying a 0.8x or 0.85x transform to oversized sections
+
+
+SECTION-BY-SECTION FIXES:
+
+SECTION 1: "No More Google Search for Best Brands" + Floating Question Cards
+
+Current state: Light background section with heading and two question cards below it.
+
+Fixes needed:
+- Apply the standard max-width container (same as hero - approximately 70% of screen width)
+- Keep the heading "No More Google Search for Best Brands" at its current size and spacing
+- For the floating question cards below the heading:
+  * Reduce the vertical spacing (padding) between the heading and cards to 40-50px
+  * Reduce the bottom padding of this section to 40-50px
+  * The cards themselves should stay at comfortable readable sizes
+  * Do NOT add any new spacing above the heading
+- Content width: Must match hero width exactly
+
+
+SECTION 2: "Category Leader Performance" Analytics Dashboard
+
+Current state: Dark background section with metrics stretched nearly full-width across screen.
+
+Fixes needed:
+- This section is currently TOO WIDE (near 100% width vs hero's 70%)
+- Apply the standard max-width container to constrain this entire dark section to hero width
+- This will automatically make the section narrower with proper margins on left/right
+- Once width is constrained, scale all internal elements proportionally:
+  * The 4 metric cards (86, 12,400, +340%, Leader) should scale down in both dimensions
+  * Reduce card width by constraining container + reduce internal padding by 20-25%
+  * Reduce card height by decreasing internal vertical padding by 20-25%
+  * Keep typography readable but scale everything proportionally
+- Below the main metrics:
+  * "Platform Execution" and "Competitive Position" subsections also scale down proportionally
+  * Reduce vertical spacing between these subsections to 32px
+- Section top padding: 60-70px
+- Section bottom padding: 60-70px
+- Result: A more compact, elegant dashboard that matches hero width
+
+
+SECTION 3: "Before vs. After: Real Client Results"
+
+Current state: Two-column comparison that may be stretching too wide.
+
+Fixes needed:
+- Apply standard max-width container (same as hero)
+- This constrains the overall section width to ~70% of screen
+- The two cards (red "Before" and green "After") sit within this container:
+  * Each card naturally becomes narrower due to container constraint
+  * Also reduce card height by 15-20% through reduced internal padding
+  * Reduce padding above and below metrics within each card
+  * Scale proportionally - not just height but width as cards adapt to narrower container
+- Section top padding: 60px
+- Section bottom padding: 60px
+- Keep text hierarchy and readability intact while achieving proportional sizing
+
+
+SECTION 4: "How We Turn Intent Into Authority" Process Framework
+
+Current state: Four process cards stretched very wide across screen, taking excessive space.
+
+Fixes needed:
+- This section is currently TOO WIDE (approaching 100% width)
+- Apply standard max-width container to match hero width
+- This constrains the 4-card layout to ~70% of screen width:
+  * Cards automatically become narrower due to container constraint
+  * Also reduce card height by 15-20% through internal padding reduction
+  * Reduce horizontal gaps between cards slightly (if any) to maintain comfortable spacing within narrower container
+  * Scale the connecting dashed line proportionally
+- Reduce vertical spacing:
+  * Gap between section heading and cards: 32-40px
+  * Section top padding: 60px
+  * Section bottom padding: 60px
+- Result: A proportionally smaller, more elegant process visualization that matches overall page width
+
+
+SECTION 5: Input Field + CTA ("Want to see how your category leaders perform?")
+
+Fixes needed:
+- Apply standard max-width container
+- Keep this section at the same comfortable width as hero
+- Maintain current spacing and sizing as this appears well-proportioned
+
+
+MEASUREMENT & VALIDATION:
+
+After implementation, verify:
+1. All sections have identical max-width (matching hero section at ~70% of viewport)
+2. Equal left and right margins on all sections creating a clean vertical alignment
+3. The three main sections (Analytics Dashboard + Before/After + Process) together fit within approximately 1800-2200px vertical space
+4. No section feels cramped - readability and visual hierarchy are maintained
+5. The page feels cohesive with consistent "content column" running down the center
+6. All text remains readable at scaled sizes
+
+
+KEY PRINCIPLE:
+Scale sections down proportionally (both width AND height) like applying a uniform zoom-out, rather than squeezing only vertical or horizontal dimensions. The goal is elegant, consistent sizing that matches your hero section's established width while reducing overall page length.
+
+Do NOT change copy, colors, or core design elements. This is purely a proportional scaling and width-consistency optimization.

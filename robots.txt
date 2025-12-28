@@ -1,0 +1,33 @@
+User-agent: GPTBot
+Allow: /
+Allow: /aboutus
+
+User-agent: CCBot
+Allow: /
+Allow: /aboutus
+
+User-agent: PerplexityBot
+Allow: /
+Allow: /aboutus
+
+User-agent: Bingbot
+Allow: /
+Allow: /aboutus
+
+User-agent: Googlebot
+Allow: /
+Allow: /aboutus
+
+User-agent: anthropic-ai
+Allow: /
+Allow: /aboutus
+
+User-agent: Claude-Web
+Allow: /
+Allow: /aboutus
+
+User-agent: *
+Allow: /
+Allow: /aboutus
+
+Sitemap: https://craftai.co.in/sitemap.xml
