@@ -2,16 +2,14 @@ const express = require('express');
 const path = require('path');
 
 const app = express();
+
+// Elastic Beanstalk ALWAYS expects 8080
 const PORT = process.env.PORT || 8080;
 
-/**
- * Serve static files
- */
+// Serve static files
 app.use(express.static(__dirname));
 
-/**
- * Routes
- */
+// Routes
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'index.html'));
 });
@@ -24,16 +22,12 @@ app.get('/aboutus', (req, res) => {
   res.sendFile(path.join(__dirname, 'aboutus.html'));
 });
 
-/**
- * Fallback
- */
+// Fallback
 app.use((req, res) => {
   res.sendFile(path.join(__dirname, 'index.html'));
 });
 
-/**
- * Start server
- */
+// Start server
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });
