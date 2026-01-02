@@ -2,36 +2,12 @@ const express = require('express');
 const path = require('path');
 
 const app = express();
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 8080;
 
 /**
- * Disable caching for HTML files
+ * Serve static files
  */
-app.use((req, res, next) => {
-  res.setHeader('Cache-Control', 'no-cache, no-store, must-revalidate');
-  res.setHeader('Pragma', 'no-cache');
-  res.setHeader('Expires', '0');
-  next();
-});
-
-/**
- * Serve static assets
- */
-app.use(express.static(__dirname, {
-  extensions: ['html'],
-  setHeaders: (res, filePath) => {
-    if (
-      filePath.endsWith('.css') ||
-      filePath.endsWith('.js') ||
-      filePath.endsWith('.png') ||
-      filePath.endsWith('.jpg') ||
-      filePath.endsWith('.ico') ||
-      filePath.endsWith('.woff2')
-    ) {
-      res.setHeader('Cache-Control', 'public, max-age=31536000');
-    }
-  }
-}));
+app.use(express.static(__dirname));
 
 /**
  * Routes
@@ -49,15 +25,15 @@ app.get('/aboutus', (req, res) => {
 });
 
 /**
- * Fallback for SPA / unknown routes
+ * Fallback
  */
 app.use((req, res) => {
-  res.status(200).sendFile(path.join(__dirname, 'index.html'));
+  res.sendFile(path.join(__dirname, 'index.html'));
 });
 
 /**
  * Start server
  */
-app.listen(PORT, '0.0.0.0', () => {
+app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });
